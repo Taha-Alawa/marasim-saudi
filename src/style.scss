@@ -1,0 +1,221 @@
+* {
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #e0d3a7;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* header */
+header {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  direction: rtl;
+  box-shadow: 0 1px 10px #fff;
+
+  img {
+    width: 150px;
+  }
+
+  nav {
+    background: #f0f0f0;
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      color: #000;
+      font-size: 21px;
+      font-weight: 700;
+      transition: 0.1s;
+    }
+
+    a:hover {
+      border-bottom: #bfa656 solid 4px;
+    }
+
+    .activePath {
+      border-bottom: #bfa656 solid 4px;
+    }
+  }
+
+  .menuBtn, .closeBtn{
+    background: transparent;
+    border: none;
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    display: none;
+  }
+
+  .small-screen-content {
+    display: none;
+  }
+}
+
+// Home Page
+.hero {
+  background-image: url(assets/images/herobus.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 80px);
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #0f284139;
+  display: flex;
+  align-items: center;
+  direction: rtl;
+
+  .info {
+    max-width: 300px;
+    margin: 0 80px 0 40px;
+    color: #fff;
+    background: #00000071;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: right;
+  }
+  
+  .hero-btn {
+    background: #bfa656;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 8px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .hero-btn:hover {
+    background: #b39944;
+  }
+}
+
+
+@media (max-width: 850px) {
+  header {
+
+    nav{
+      width: auto;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 30%;
+      bottom: 0;
+      margin: 0;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      padding: 50px 25px 25px;
+      transition: all 0.5s;
+      transform: translateX(-100vw);
+      border-right: 2px solid #a7a7a7;
+      box-shadow: 5px 5px 30px;
+
+      a {
+        width: 100%;
+        margin: 15px;
+        font-size: 17px;
+        border-bottom: 3px solid #d6d6d6;
+      }
+      
+      .closeBtn {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 30px;
+        font-size: 48px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+
+    .menuBtn{
+      display: block;
+    }
+
+
+    .show-navbar {
+      transform: none;
+    }
+
+    .small-screen-content {
+      width: 100%;
+      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding-right: 0;
+        margin-right: 15px;
+
+        li {
+          list-style: none;
+          
+          .social-media {
+            border-bottom: none;
+
+            img {
+              background: #bfbfbf;
+              width: 40px;
+              height: 40px;
+              padding: 2px;
+              margin-right: -15px;
+              border-radius: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .phone-number {
+      text-align: right;
+      direction: ltr;
+    }
+  }
+
+  .hero {
+    background-image: url(assets/images/smallherobus.png);
+    .hero-content{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .info {
+        margin: 0 0 20px;
+        min-width: 200px;
+        max-width: 200px;
+      }
+    }
+  }
+}
