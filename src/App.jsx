@@ -7,14 +7,14 @@ import {
 import "./style.scss"
 import Layout from "./components/Layout"
 import Home from "./pages/Home"
-import About from "./pages/About"
+import Buses from "./pages/Buses"
 import Serves from "./pages/Serves"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
+      <Route path="buses" element={<Buses />} />
       <Route path="serves" element={<Serves />} />
     </Route>
   )

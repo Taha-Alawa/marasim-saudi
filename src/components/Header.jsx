@@ -37,10 +37,10 @@ const Header = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "activePath" : null)}
-          to="/about"
+          to="/buses"
           onClick={showNavBar}
         >
-          من نحن
+          حافلاتنا
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "activePath" : null)}

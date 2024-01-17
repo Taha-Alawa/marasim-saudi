@@ -4,7 +4,7 @@
 
 body {
   height: 100vh;
-  background: #e0d3a7;
+  background: #efe9d6;
   margin: 0;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -114,13 +114,23 @@ header {
   }
 }
 
+.information {
+  display: flex;
+  margin-top: 50px;
+
+  .ka3ba {
+    width: 300px;
+    height: 100%;
+  }
+}
+
 
 @media (max-width: 850px) {
   header {
 
     nav{
       width: auto;
-      position: absolute;
+      position: fixed;
       z-index: 2;
       top: 0;
       left: 0;
