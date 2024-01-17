@@ -117,10 +117,28 @@ header {
 .information {
   display: flex;
   margin-top: 50px;
+  position: relative;
 
   .ka3ba {
-    width: 300px;
+    width: 37%;
+    max-height: 900px;
+  }
+
+  .logo-desgin {
+    width: 27%;
     height: 100%;
+    z-index: 1;
+    margin: auto;
+  }
+
+  div {
+    width: 80%;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    height: 300px;
+    text-align: right;
   }
 }
 
