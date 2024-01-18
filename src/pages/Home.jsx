@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ka3ba from "../assets/images/ka3ba.png"
+import madina from "../assets/images/madina.png"
 import transperntLogo from "../assets/images/whiteLogo.png"
 
 const Home = () => {
@@ -33,24 +34,117 @@ const Home = () => {
           <Link to="buses" className="hero-btn">استكشف حافلاتنا</Link>
         </div>
       </section>
+      <p className="br"></p>
+      <p className="br"></p>
       <section className="information">
         <img src={ka3ba} className="ka3ba" />
-        <img src={transperntLogo} className="logo-desgin" />
-        <div>
+        <motion.img
+          initial={{
+            x: 250,
+            opacity: 0
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 3,
+          }}
+          src={transperntLogo}
+          className="logo-desgin" />
+        <motion.div
+          initial={{
+            x: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+        >
           <h2>نبذة عن مراسم السعودية</h2>
           <p>تأسست شركة مراسم السعودية للنقل لممارسة أنشطة النقل البري في 
             المدن وضواحيها ويتركز نشاطها في عدة مجالات منها :
           </p>
           <ol>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem!</li>
+            <li>
+              خدمات نقل المعتمرين خلال موسم العمرة والتنقل بين مكة المكرمة والمدينة
+              المنورة.
+            </li>
+            <li> خدمات نقل الحجاج خلال موسم الحج والتنقل بين المشاعر المقدسة.</li>
+            <li>
+              خدمات النقل السياحي والبرامج السياحية للركاب القادمين من خارج المملكة
+              وكذلك المقيمين داخل المملكة العربية السعودية.
+            </li>
+            <li>
+              خدمات البرامج الرياضية والترفيهية ونقل الضيوف خلال المواسم الرياضية
+              والترفيهية والسياحية.
+            </li>
+            <li>تقديم خدمات البرامج السياحية.</li>
+            <li>تقديم خدمات برامج العمرة والحج.</li>
           </ol>
-        </div>
+        </motion.div>
       </section>
+      <p className="br"></p>
+      <p className="br"></p>
+      {/* <section dir="rtl" className="information">
+        <img src={madina} className="madina" />
+        <motion.img
+          initial={{
+            x: 250,
+            opacity: 0
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 3,
+          }}
+          src={transperntLogo}
+          className="logo-desgin" />
+        <motion.div
+          className="madina-div"
+          initial={{
+            x: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+        >
+          <h2>نبذة عن مراسم السعودية</h2>
+          <p>تأسست شركة مراسم السعودية للنقل لممارسة أنشطة النقل البري في 
+            المدن وضواحيها ويتركز نشاطها في عدة مجالات منها :
+          </p>
+          <ol>
+            <li>
+              خدمات نقل المعتمرين خلال موسم العمرة والتنقل بين مكة المكرمة والمدينة
+              المنورة.
+            </li>
+            <li> خدمات نقل الحجاج خلال موسم الحج والتنقل بين المشاعر المقدسة.</li>
+            <li>
+              خدمات النقل السياحي والبرامج السياحية للركاب القادمين من خارج المملكة
+              وكذلك المقيمين داخل المملكة العربية السعودية.
+            </li>
+            <li>
+              خدمات البرامج الرياضية والترفيهية ونقل الضيوف خلال المواسم الرياضية
+              والترفيهية والسياحية.
+            </li>
+            <li>تقديم خدمات البرامج السياحية.</li>
+            <li>تقديم خدمات برامج العمرة والحج.</li>
+          </ol>
+        </motion.div>
+      </section>
+      <p className="br"></p>
+      <p className="br"></p> */}
     </>
   );
 };

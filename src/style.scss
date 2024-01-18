@@ -4,7 +4,7 @@
 
 body {
   height: 100vh;
-  background: #efe9d6;
+  background: #f4f0e6;
   margin: 0;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -84,16 +84,22 @@ header {
   background: #0f284139;
   display: flex;
   align-items: center;
-  direction: rtl;
+  flex-direction: column;
+  direction: ltr;
 
   .info {
-    max-width: 300px;
-    margin: 0 80px 0 40px;
+    width: 300px;
+    margin: 80px 0px 40px;
     color: #fff;
     background: #00000071;
     padding: 10px;
     border-radius: 15px;
     text-align: right;
+
+    h2 {
+      font-size: 26px;
+      margin: 10px 0;
+    }
   }
   
   .hero-btn {
@@ -114,34 +120,130 @@ header {
   }
 }
 
+.br {
+  color: #b39944;
+  border-bottom: 5px solid #b39944;
+  margin: 22px 0;
+}
+
 .information {
   display: flex;
-  margin-top: 50px;
   position: relative;
+  align-items: center;
 
   .ka3ba {
     width: 37%;
-    max-height: 900px;
+    max-height: 750px;
+    margin-right: -180px;
+    z-index: 4;
+  }
+
+  .madina {
+    width: 37%;
+    max-height: 750px;
+    margin-left: 180px;
+    z-index: 4;
   }
 
   .logo-desgin {
-    width: 27%;
+    width: auto;
     height: 100%;
+    max-height: 500px;
     z-index: 1;
     margin: auto;
   }
 
   div {
-    width: 80%;
+    width: 100%;
     z-index: 3;
     position: absolute;
     right: 0;
-    top: 30px;
-    height: 300px;
+    top: auto;
+    height: 500px;
     text-align: right;
+    background: linear-gradient(300deg, #b39944, transparent);
+    color: #fff;
+    
+    h2 {
+      font-size: 35px;
+      margin: 20px 15px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 62%;
+      margin: 0 15px 0 auto;
+      font-weight: 700;
+      direction: rtl;
+      line-height: 30px;
+    } 
+
+    ol {
+      direction: rtl;
+
+      li {
+        max-width: 61%;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .madina-div {
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    right: 37%;
+    top: auto;
+    height: 500px;
+    text-align: right;
+    direction: ltr;
+    background: linear-gradient(300deg, #b399446a, #b39944);
+    color: #fff;
+    
+    h2 {
+      font-size: 35px;
+      margin: 20px 15px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 62%;
+      margin: 0 15px 0 auto;
+      font-weight: 700;
+      direction: rtl;
+      line-height: 30px;
+    } 
+
+    ol {
+      direction: rtl;
+
+      li {
+        max-width: 61%;
+        font-size: 18px;
+      }
+    }
   }
 }
 
+
+
+@media (min-width: 1000px) {
+  .hero-content {
+    .info {
+      width: 550px;
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 23px;
+      }
+    }
+  }
+}
 
 @media (max-width: 850px) {
   header {
@@ -149,7 +251,7 @@ header {
     nav{
       width: auto;
       position: fixed;
-      z-index: 2;
+      z-index: 200;
       top: 0;
       left: 0;
       right: 30%;
@@ -158,7 +260,7 @@ header {
       flex-direction: column;
       align-items: start;
       justify-content: start;
-      padding: 50px 25px 25px;
+      padding: 50px 15px 25px;
       transition: all 0.5s;
       transform: translateX(-100vw);
       border-right: 2px solid #a7a7a7;
@@ -167,7 +269,7 @@ header {
       a {
         width: 100%;
         margin: 15px;
-        font-size: 17px;
+        font-size: 16px;
         border-bottom: 3px solid #d6d6d6;
       }
       
@@ -203,7 +305,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 100%;
+        width: 90%;
         padding-right: 0;
         margin-right: 15px;
 
@@ -243,6 +345,88 @@ header {
         margin: 0 0 20px;
         min-width: 200px;
         max-width: 200px;
+      }
+    }
+  }
+
+  .information {
+    .ka3ba, .madina {
+      width: 47%;
+      height: 500px;
+      z-index: 2;
+      margin: 0;
+    }
+
+    .logo-desgin {
+      display: none;
+    }
+
+    div, .madina-div {
+
+      p {
+        font-size: 20px;
+        max-width: 70%;
+      }
+
+      ol {
+        li {
+          max-width: 70%;
+        }
+      }
+    }
+
+    .madina-div {
+      right: 0;
+      background: linear-gradient(270deg, transparent, #b39944);
+
+      h2 {
+        margin-right: 34%;
+      }
+
+      p {
+        margin: 0 34% 0 15px;
+      } 
+
+      ol {
+        li {
+          margin: 0 34% 0 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  
+  .information {
+
+    .ka3ba, .madina {
+      max-height: 790px;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .logo-desgin {
+      display: none;
+    }
+
+    div, .madina-div {
+      height: 100%;
+
+      h2 {
+        font-size: 28px;
+        margin: 10px 15px;
+      }
+
+      p {
+        font-size: 19px;
+        margin-bottom: 20px;
+      }
+
+      ol {
+        li {
+          max-width: 80%;
+        }
       }
     }
   }
