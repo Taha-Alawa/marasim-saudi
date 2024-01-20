@@ -141,7 +141,6 @@ header {
   .madina {
     width: 37%;
     max-height: 750px;
-    margin-left: 180px;
     z-index: 4;
   }
 
@@ -210,20 +209,11 @@ header {
     p {
       font-size: 20px;
       max-width: 62%;
-      margin: 0 15px 0 auto;
+      margin: 0 15px 50px auto;
       font-weight: 700;
       direction: rtl;
       line-height: 30px;
     } 
-
-    ol {
-      direction: rtl;
-
-      li {
-        max-width: 61%;
-        font-size: 18px;
-      }
-    }
   }
 }
 
@@ -428,6 +418,17 @@ header {
         li {
           max-width: 80%;
         }
+      }
+    }
+
+    .madina-div {
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        max-width: 80%;
+        margin: 0 auto 50px;
       }
     }
   }

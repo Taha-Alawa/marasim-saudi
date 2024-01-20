@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ka3ba from "../assets/images/ka3ba.png"
-import madina from "../assets/images/madina.png"
+import madina from "../assets/images/madina.jpg"
 import transperntLogo from "../assets/images/whiteLogo.png"
 
 const Home = () => {
@@ -90,11 +90,11 @@ const Home = () => {
       </section>
       <p className="br"></p>
       <p className="br"></p>
-      {/* <section dir="rtl" className="information">
+      <section dir="rtl" className="information">
         <img src={madina} className="madina" />
         <motion.img
           initial={{
-            x: 250,
+            x: -250,
             opacity: 0
           }}
           whileInView={{
@@ -109,7 +109,7 @@ const Home = () => {
         <motion.div
           className="madina-div"
           initial={{
-            x: 100,
+            x: -100,
             opacity: 0,
           }}
           whileInView={{
@@ -120,31 +120,21 @@ const Home = () => {
             duration: 1,
           }}
         >
-          <h2>نبذة عن مراسم السعودية</h2>
-          <p>تأسست شركة مراسم السعودية للنقل لممارسة أنشطة النقل البري في 
-            المدن وضواحيها ويتركز نشاطها في عدة مجالات منها :
+          <h2>رؤيتنا</h2>
+          <p>
+            رؤيتنا أن تكون مراسم السعودية شركة سعودية رائدة في مجال النقل البري لتحقق التنافسية على مستوى عال من المعايير
+            الدولية للنقل البري على المستويين المحلي والإقليمي, وبناء
+            وتطوير خدمات تنقل آمنة, عالية الجودة لعملائنا كناقل بري
           </p>
-          <ol>
-            <li>
-              خدمات نقل المعتمرين خلال موسم العمرة والتنقل بين مكة المكرمة والمدينة
-              المنورة.
-            </li>
-            <li> خدمات نقل الحجاج خلال موسم الحج والتنقل بين المشاعر المقدسة.</li>
-            <li>
-              خدمات النقل السياحي والبرامج السياحية للركاب القادمين من خارج المملكة
-              وكذلك المقيمين داخل المملكة العربية السعودية.
-            </li>
-            <li>
-              خدمات البرامج الرياضية والترفيهية ونقل الضيوف خلال المواسم الرياضية
-              والترفيهية والسياحية.
-            </li>
-            <li>تقديم خدمات البرامج السياحية.</li>
-            <li>تقديم خدمات برامج العمرة والحج.</li>
-          </ol>
+          <p>
+            ونعمل على تقديم أفضل الخدمات, وفق أعلى معايير الجودة
+            والسلامة بما يحقق رؤية المملكة العربية السعودية ويتوافق
+            مع خدمة ضيوف الرحمن ونساهم بتطوير قطاع السياحة
+          </p>
         </motion.div>
       </section>
       <p className="br"></p>
-      <p className="br"></p> */}
+      <p className="br"></p>
     </>
   );
 };
